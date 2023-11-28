@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!-- Задание 1 
+        <script>
+            let num1 = parseInt(prompt("Нижняя граница"));
+            let num2 = parseInt(prompt("Верхняя граница"));
+            let sum= 0;
+            for(let i = num1;i<=num2;i++)
+                sum+=i;
+            document.write("Сумма всех чисел в диапазоне",sum);
+        </script>
+        ------------------------------------------------------- -->
+
+        <!-- Задание 2 
+        <script>
+            let num1 = parseInt(prompt("Число 1 "));
+            let num2 = parseInt(prompt("Число 2 "));
+            let max = num1>num2?num1:num2;
+            let biggestDivider=0;
+            for(let i = 1;i<max/2;i++)
+            {
+                if(i>biggestDivider && (num1%i===0 && num2%i===0))
+                    biggestDivider=i;
+            }
+            document.write(biggestDivider);
+        </script>
+        ------------------------------------------------------------ -->
+        
+        <!-- Задание 3 
+        <script>
+            let num = parseInt(prompt("Введите число"));
+            for(let i = 1;i<=num;i++)
+            {
+                if(num%i===0)
+                    document.write(i,'\n');
+            }
+        </script>
+         ------------------------------------------------------------ -->
+
+         <!-- Задание 4
+         <script>
+           let num = prompt("Введите число");
+           let numLength = num.toString().length;
+           document.write("Длина числа: " + numLength);
+         </script>
+         ----------------------------------------------------------------- -->
+
+         <!-- Задание 5
+         <script>
+            let plus=minus=zero=even=odd=0;
+            for(let i =0;i<10;i++)
+            {
+                let num = parseInt(prompt("Введите число"));
+                if(num > 0)
+                    plus++;
+                else if(num < 0)
+                    minus++
+                else
+                    zero++;
+                num%2==0?even++:odd++;
+            }
+            document.write("Положительные: "+plus +", Отрицательные: "+minus+ ", Нули: "+zero+ ", Четные: "+even+", Нечетные: "+odd);
+            
+         </script>
+         ----------------------------------------------------------------- -->
+
+         <!-- Задание 6
+         <script>
+            calculator:
+            while(true){
+                let num = parseInt(prompt("Первое число"));
+                let num2 = parseInt(prompt("Второе число:"));
+                let operation = (prompt("Введите математическую операцию:"));
+                switch (operation) {
+                    case '+':
+                        alert(`${num} + ${num2} = ${num+num2}`);
+                        break;
+                    case '-':
+                        alert(`${num} + ${num2} = ${num-num2}`);
+                        break;
+                    case '*':
+                        alert(`${num}*${num2} = ${num*num2}`);
+                        break;
+                    case '/':
+                        if(num2==0)
+                        {
+                            alert("Cant divide by zero");
+                            break;
+                        }
+                        alert(`${num}/${num2} = ${num/num2}`);
+                    default:
+                        alert('Unknown operator');
+                        break;
+                }
+                let cont = confirm("Continue?");
+            }
+         </script>
+         ------------------------------------------------------- -->
+
+         <!-- Задание 7
+         <script>
+           let num = prompt("Введите число");
+            for (let i = 0; i < 2; i++) {
+                let firstChar = num.substring(0, 1);
+                num = num.substring(1) + firstChar;
+            }
+            document.write(num);
+         </script>
+         -------------------------------------------------------------------- -->
+
+         <!-- Задание 8
+         <script>
+           let week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+            for (let i = 0; i < week.length; i++) {
+                alert(`День недели: ${week[i]}`);
+                if (confirm("Хотите продолжить?")) {
+                    if (i === 6) {
+                        i = -1; // -1, чтобы после увеличения i в конце цикла он стал равен 0
+                    }
+                } 
+                else {
+                    break;
+                }
+            }
+         </script>
+         ----------------------------------------------------------------------------- -->
+
+         <!-- Задание 9
+         <script>
+            for(let i = 2;i<9;i++)
+            {
+                for(let j = 1;j<10;j++)
+                    console.log(`${i}*${j} = ${i*j} \n`)
+            }
+         </script>
+         ------------------------------------------------------- -->
+
+         Задание 10
+         <script>
+            let num = parseInt(prompt("Введите число"));
+            let upper=100,lower=1;
+            let n=upper/2;
+            let symb;
+            let found=false;
+            guess:while (true){
+                symb = prompt(`Ваше число больше/меньше или равно ${n}?`);
+                switch(symb)
+                {
+                    case '>':  
+                        lower=n+1;
+                        n=parseInt((upper+lower)/2);
+                        break;
+                    case '<':
+                        upper=n-1;
+                        n=parseInt((upper+lower)/2);
+                        break;
+                    case '=':
+                        alert("Число найдено!");
+                        break guess;
+                }
+            }
+         </script>
+    </body>
+</html>
